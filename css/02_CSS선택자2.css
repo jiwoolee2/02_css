@@ -1,0 +1,48 @@
+/* .css 파일 == <style> 태그 내부와 같음 */
+
+strong{
+    color: steelblue;
+    font-size: 18px;
+    text-decoration: underline;
+    font-family: '맑은고딕';
+}
+
+code{
+    background-color: #F5E7B2;
+    display: block; /* 요소의 형식을 block 형식(행 분할)으로 변경 */
+    font-weight: bold;
+    font-size: 14px;
+}
+/* 기본 속성 선택자 1 - 속성명 */
+[name]{background-color: skyblue;}
+
+/* 기본 속성 선택자 2 - 속성명=속성값 */
+[name=bbb]{font-size: 20px;}
+[name=aaa]{text-decoration: underline;}
+
+/* 자식 선택자 (A>B) */
+/* class 속성 값이 "parent-1"인 요소의 자식 중
+li 태그를 모두 선택 */
+.parent-1>li{
+    font-size: 24px;
+}
+
+
+/* class 속성 값이 "parent-1"인 요소의 자식 중
+class 속성 값이 "child-1"인 모든 요소 선택 */
+.parent-1>.child-1{
+    background-color: yellow;
+}
+
+/* 자식 선택자를 여러 번 작성하는 경우 */
+.parent-1>li>span{
+    background-color: red;
+}
+
+/* 후손 선택자 (A B)   이름이 같은 모든 후손 요소를 선택할 때 사용*/
+.parent-2 p{background-color: lightcoral;}
+
+/* class가 parent-2인 요소의 하위요소를 모두 선택 */
+.parent-2 *{
+    font-family: "궁서체";
+}
