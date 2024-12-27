@@ -89,6 +89,58 @@
             <p>.parent-2의 후손 요소</p>
             <h4>.parent-2의 후손 요소</h4>
         </div>
-    </div>
+    </div>/.parent-2
+
+    <hr>
+
+    <h3>반응 선택자</h3>
+    <pre>
+        - 사용자의 움직임에 반응하여 요소를 선택하는 선택자
+
+        선택자 : hover    --> 선택된 요소에 마우스가 올라 갔을 떄 속성을 부여할 수 있음
+                            + 마우스가 벗어나면 원래 상태로 복원
+        
+        선택자 : active   --> 선택된 요소를 클릭하고 있을 경우 선택
+    </pre>
+
+    <button class="test-btn">테스트용 버튼</button>
+
+    <hr>
+
+    <h3>상태 선택자</h3>
+
+    <pre>
+        - input 태그의 상태에 따라서 선택되는 선택자
+
+        :focus
+        - input 요소에 입력할 수 있는 상태가 되었을 때
+            
+        :checked
+        - type이 radio, checkbox인 요소가 체크 되었을 때 선택
+
+        :enabled/ disabled
+        - input에 값을 작성할 수 있을 때/없을 때
+    </pre>
+
+    <h4>:focus 테스트</h4>
+    입력 1 : <input type="text" class="input-1">
+
+    <h4>:checked 테스트</h4>
+    radio :
+    <input type="radio" name="radioGroup">
+    <input type="radio" name="radioGroup">
+    <input type="radio" name="radioGroup">
+
+    <br>
+    checkbox :
+    <input type="checkbox" name="checkGroup">
+    <input type="checkbox" name="checkGroup">
+    <input type="checkbox" name="checkGroup">
+
+    <h4>:enabled/:disabled 테스트</h4>
+    <input type="text" class="input-3">
+    <br>
+    <input type="text" class="input-3" disabled>
+    
 </body>
 </html>
