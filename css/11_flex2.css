@@ -1,0 +1,41 @@
+.flex-container{
+
+    /* 
+    viewport : 현재 화면이 보여지고 있는 영역
+    (브라우저,스마트폰,태블릿 등 기기 화면)
+    
+    vh(Viewport Height) : 현재 화면 높이 비례 단위
+    100vh == 화면 높이 100%
+    vw(Viewport Width) : 현재 화면 너비 비례 단위
+    100vw == 화면 너비 100% 
+    */
+    
+    height: 75vh; /* 화면 높이 75% */
+
+    margin: 30px 20px;
+
+    /* 내부 요소(item)를 유연하게 배치하여 표시 */
+    display: flex;
+
+    /* flex-wrap : item을 한 줄/여러 줄로  배치하는 속성 */
+    /* flex-wrap:nowrap; --> 기본값 (한 줄로 아이템 배치) */
+    flex-wrap: wrap; 
+    /* flex-wrap: wrap-reverse; */
+
+    /* flex-flow:flex-direction+flex-wrap */
+    /* flex-flow: column wrap; */
+
+    /* item 중심축 방향 정렬 */
+    justify-content: center;
+    /* align-items : item이 묶인 한 줄 안에서 교차축 방향 정렬 */
+    /* align-items: center; */
+    /* align-content: 
+    - 교차축(세로) 방향으로 item 묶음(wrap) 전체를 정렬하는 속성 */
+    /* align-content: flex-start; 묶음을 start방향(위쪽)으로 압축 */
+    /* align-content: flex-end; 묶음을 end방향(아래쪽)으로 압축 */
+    /* align-content: center; 묶음을 center방향(위쪽)으로 압축 */
+    /* align-content: space-around; item에 축 방향 양쪽으로 일정 크기 공간을 배치 */
+    /* align-content:space-evenly; item에 축 방향 양쪽으로 모두 동일한 크기의 공간을 배치 */
+    align-content:space-between; /* space-evenly에서 시작, 끝 item은 flex-container 붙게 배치 */
+
+}
