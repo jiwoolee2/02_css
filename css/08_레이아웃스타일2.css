@@ -1,0 +1,45 @@
+*{ /* * : 모든 요소를 선택 */
+    box-sizing:border-box
+    /* border-box
+    - width/height 설정 시
+    설정된 값이 content + padding + border 크기를
+    합산한 결과가 되도록 content 영역의 크기를
+    자동으로 조정
+    */
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+}
+
+/* border(테두리) */
+.border{
+    /* 두꼐 스타일 색상 순으로 작성 */
+    border: 10px solid black;
+}
+
+/* content(내용) */
+.content{ /* 위에 box에서 길이 설정을 했는데 box와 content 클래스를 한태그
+    안에 넣을 경우 content가 밑에 써졌으므로 box속성이 아니라
+    content속성이 적용된다. */
+    width: 150px;
+    height: 150px;
+    box-sizing: content-box; 
+}
+
+/* padding(채우기) */
+.padding{
+    padding: 20px;
+    /* content-border 사이에 20px 만큼의 공간 생성(네방향) */
+}
+
+/* margin(여백, 간격) */
+.margin-1{
+    margin: 50px;
+}
+
+.margin-2{
+    margin: 100px;
+}
