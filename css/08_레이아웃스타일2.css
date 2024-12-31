@@ -83,7 +83,8 @@
 
 .test3{
     margin:auto;
-    text-align: center;
+    /* text-align : 요소 내부에 작성된 글자 또는 인라인 요소 정렬 */
+    text-align: center; 
 }
 
 .test3>span{
