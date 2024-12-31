@@ -43,3 +43,50 @@
 .margin-2{
     margin: 100px;
 }
+
+/* 방향 테스트 */
+.test1{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-right: 70px;
+    margin-left: 90px;
+
+    /* border-방향 : 크기 스타일 색상 
+    스타일 종류 : bold(실선), dotted(...), dashed(---),
+    double(이중실선), inset(음각), outset(양각) */
+
+    border-top: 5px dotted red;
+    border-right: 10px dashed blue;
+    border-bottom: 7px double black;
+    border-left: 15px inset grey;
+}
+
+.test2{
+    padding: 10px 50px;
+
+    margin: 50px 100px 150px;
+
+    border-width: 20px 30px 40px 70px;
+}
+
+/* margin : auto 확인하기 */
+.container{
+    width: 400px;
+    height: 300px;
+    border: 3px solid black;
+}
+
+.test3{
+    margin:auto;
+    text-align: center;
+}
+
+.test3>span{
+    margin: auto;  /* inline요소는 적용 안됨 
+                    ->정렬하려면 text-align 사용 */
+}
