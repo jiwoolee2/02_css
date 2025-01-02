@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0; /* 다른 요소와의 간격 */
+    padding: 0; /* content,border 사이 간격 */
+}
+
+div{
+    border: 1px solid black;
+}
+
+h1,h3{
+    margin: 10px 0; /* 위아래로만 10px씩 간격을 유지하겠다는 뜻 */
+    text-decoration: underline;
+}
+
+/* 상하 2분할 */
+.container-1{
+    width: 500px;
+    height: 600px;
+    margin:20px;
+}
+
+.container-1>div{
+    width: 100%; /* 부모 너비 100%==500px */
+    height: 50%; /* 부모 높이 50% ==300px */
+}
+.container-1>div:first-child{
+    background-color: orange;
+}
+.container-1>div:last-child{
+    background-color: pink;
+}
+
+/* 상하 3분할 */
+.container-2{
+    width : 300px;
+    height : 432px;
+    margin: 20px;
+}
+
+.container-2>div:nth-child(1){
+    width: 100%;
+    height: 50%;
+    background-color: red;
+}
+.container-2>div:nth-child(2){
+    width: 100%;
+    height: 30%;
+    background-color: green;
+}
+.container-2>div:nth-child(3){
+    width: 100%;
+    height: 20%;
+    background-color: blue;
+}
+
+/* 좌우 2분할 */
+.container-3{
+    width:400px;
+    height:200px;
+    margin: 20px;
+
+    /* 내부 요소를 유연하게 배치,정렬하겠다고 지정하는 속성 */
+    display: flex;
+
+    /* 가로 방향으로 요소 배치 */
+    flex-direction: row;
+}
+.container-3>div{
+    width: 50%;
+    height: 100%;
+    /* display: inline-block; */
+
+/* inline-block, inline : 글자 취급
+-> 엔터나 띄어쓰기를 하면 한칸 옆으로 밀려남
+-> 한 행에 같이 block을 만들고 싶으면 
+엔터나 띄어쓰기 X  따라서 display:flex를 이용
+ */
+}
+.container-3>div:nth-child(1){
+    background-color: black;
+}
+.container-3>div:nth-child(2){
+    background-color:pink;
+}
+
+/* 좌우 5분할 */
+.container-4{
+    width:600px;
+    height:100px;
+    margin:20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* 교차축 정렬 기본값 == height ==100% */
+}
+.container-4>div:nth-child(2n+1){
+    width: 10%;
+    background-color: black;
+}
+.container-4>div:nth-child(2n){
+    width: 35%;
+    background-color:pink;
+}
+
+/* 田 모양 만들기 */
+.container-5{
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+}
+
+/* 행 분할 */
+.container-5>.row{
+    height: 50%;
+
+    /* 1,2열 내부를 가로로 분할하기위한 작업 */
+    display: flex;
+    flex-direction: row;
+}
+/* 열 분할 */
+.container-5>.row>.col{
+    width: 50%;
+}
